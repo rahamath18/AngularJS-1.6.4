@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html>
 
-	<link rel="stylesheet" href="/w3css/4/w3.css">
+	<head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+		<title>Angular Data Binding</title>
 
-	<body ng-app="myApp" ng-controller="myPageCtrl">
+		<link rel="stylesheet" href="../css/myApplicationCSS.css">
 
-		<head><title>Angular Data Binding</title></head>
+		<!-- <script src="../js/angular-animate.js"></script> -->
+		<!-- <script src="../js/angular-aria.js"></script> -->
+		<!-- <script src="../js/angular-cookies.js"></script> -->
+		<!-- <script src="../js/angular-loader.js"></script> -->
+		<!-- <script src="../js/angular-message-format.js"></script> -->
+		<!-- <script src="../js/angular-messages.js"></script> -->
+		<!-- <script src="../js/angular-mocks.js"></script> -->
+		<!-- <script src="../js/angular-parse-ext.js"></script> -->
+		<!-- <script src="../js/angular-resource.js"></script> -->
+		<!-- <script src="../js/angular-route.js"></script> -->
+		<!-- <script src="../js/angular-sanitize.js"></script> -->
+		<!-- <script src="../js/angular-scenario.js"></script> -->
+		<!-- <script src="../js/angular-touch.js"></script> -->
+		<!-- <script src="../js/angular.js"></script> -->
+		<!-- <script src="../js/webjars-requirejs.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-loader.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-message-format.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-messages.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-mocks.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-parse-ext.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-scenario.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-touch.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/webjars-requirejs.js"></script> -->
+		
+	</head>
 
-		For further details read at online - <a href="https://www.w3schools.com/angular/angular_databinding.asp">Angular Data Binding</a>
+	<p>For further details read at online - <a href="https://www.w3schools.com/angular/angular_databinding.asp">Angular Data Binding</a></p>
 
-		<script src= "myUsers.js"></script>
+	<body>
+
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<h3 ng-click="changeName()">{{helloMessage}}</h3>
+		</div>
+
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+				$scope.helloMessage = "Hello World, AngularJS 1.6.4 - Angular Data Binding Example";
+				$scope.changeName = function() {
+				$scope.helloMessage = $scope.helloMessage + " First click event!";
+				}
+			});
+		</script>
+
+		<script src="../js/myApplicationJavaScript.js"></script>
+
 	</body>
 </html>
